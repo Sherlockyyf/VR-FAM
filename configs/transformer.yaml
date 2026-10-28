@@ -1,0 +1,33 @@
+# Nonlinear latent transformation network T (Sec. 2.2, Eq. 4 / 10).
+model:
+  n_styles: 18
+  style_dim: 512
+  depth: 3             # 3 FC layers per style layer (paper). depth: 1 = linear latent transformer
+  hidden_dim: 512
+
+attributes: [Arched_Eyebrows, Bald, Bangs, Black_Hair, Blond_Hair, Double_Chin, Eyeglasses, Heavy_Makeup,
+             Male, Mouth_Slightly_Open, Mustache, Narrow_Eyes, No_Beard, Pale_Skin, Smiling, Wearing_Lipstick,
+             Young]
+
+train_ratio: 0.9
+batch_size: 32
+epochs: 20
+lr: 1.0e-4
+betas: [0.9, 0.999]
+weight_decay: 5.0e-4
+step_size: 10          # StepLR, in epochs
+gamma: 0.1
+workers: 0
+
+adaptive_alpha: true   # alpha = distance of the predicted probability to the flipped label
+corr_threshold: 1.0    # attributes with |correlation| >= threshold are excluded from L_attr
+
+lambda:
+  cls: 1.0             # Eq. (6)
+  attr: 1.0            # Eq. (7)
+  reg: 10.0            # ||T(w) - w||^2, keeps the edit small (used in all our experiments)
+  id: 0.0              # Eq. (8). Set to 1.0 to enable; needs the generator + ArcFace (memory heavy)
+id_subset: 4           # number of samples per batch used for the identity loss
+
+log_interval: 100
+image_interval: 2000

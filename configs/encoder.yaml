@@ -1,0 +1,36 @@
+# Variance-reduced encoder (Sec. 2.1 / 3.1 of the paper). Train on CelebA-HQ, test on FFHQ.
+train_dir: data/celeba_hq/train          # aligned 1024x1024 (or 256x256) face images
+test_dir: data/ffhq/test
+stylegan_size: 1024
+
+stylegan_weights: pretrained_models/stylegan2-ffhq-config-f.pt
+ir_se50: pretrained_models/model_ir_se50.pth
+
+batch_size: 4
+test_batch_size: 4
+workers: 4
+lr: 1.0e-4
+betas: [0.95, 0.999]
+max_steps: 100000
+
+# Progressive training: w alone for the first 20K steps, then one delta_i every 2K steps.
+progressive_start: 20000
+progressive_step_every: 2000
+
+# Loss weights (Eq. 9)
+lambda_l2: 1.0
+lambda_lpips: 0.8
+lambda_id: 0.1
+lambda_reg: 2.0e-4     # delta regularisation, Eq. (1)
+lambda_adv: 0.1        # latent discriminator, Eq. (3)
+delta_norm: 2
+
+# Latent discriminator, Eq. (2)
+d_lr: 2.0e-5
+r1: 10
+d_reg_every: 16
+
+board_interval: 50
+image_interval: 1000
+val_interval: 10000
+save_interval: 10000

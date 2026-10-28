@@ -1,0 +1,13 @@
+torch>=1.8
+torchvision>=0.9
+numpy
+scipy
+pillow
+pyyaml
+tqdm
+lpips
+tensorboard
+
+# optional
+# dlib          # face alignment of in-the-wild photos (scripts/invert.py --align)
+# pytorch-fid   # FID in scripts/evaluate.py

@@ -1,0 +1,11 @@
+# Latent attribute classifier C (Sec. 2.2): 9216 -> 2048 -> 512 -> 40
+fmaps: [9216, 2048, 512, 40]
+activation: leakyrelu
+
+train_ratio: 0.9       # first 90% of the latent codes for training, the rest for validation
+batch_size: 256
+epochs: 20
+lr: 1.0e-4
+weight_decay: 5.0e-4
+step_size: 10          # StepLR, in epochs
+gamma: 0.1
