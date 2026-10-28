@@ -11,6 +11,8 @@ Shanghai Key Lab of Intelligent Information Processing, School of Computer Scien
 **ICASSP 2022**
 
 <a href="https://doi.org/10.1109/ICASSP43922.2022.9746046"><img src="https://img.shields.io/badge/Paper-ICASSP%202022-blue" alt="Paper"></a>
+<a href="https://yifanyuan.com/#full-icassp22"><img src="https://img.shields.io/badge/Homepage-yifanyuan.com-green" alt="Homepage"></a>
+<a href="https://yifanyuan.com/lab/#p-icassp22"><img src="https://img.shields.io/badge/Lab-MUSE%20Lab-8a2be2" alt="MUSE Lab"></a>
 <a href="https://github.com/Sherlockyyf/DO-FAM"><img src="https://img.shields.io/badge/Follow--up-DO--FAM%20(ICASSP%202023)-orange" alt="DO-FAM"></a>
 <a href="https://pytorch.org"><img src="https://img.shields.io/badge/PyTorch-%E2%89%A51.8-ee4c2c?logo=pytorch&logoColor=white" alt="PyTorch"></a>
 <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-lightgrey" alt="License"></a>
@@ -20,11 +22,6 @@ Shanghai Key Lab of Intelligent Information Processing, School of Computer Scien
 <p align="center"><img src="assets/sequential_editing.jpg" width="85%"><br><em>Sequential facial attribute editing on real images.</em></p>
 
 **TL;DR:** A StyleGAN-based facial attribute manipulation (FAM) framework that balances the three requirements of FAM — *editing ability*, *distortion* and *fidelity*. A **variance-reduced encoder** keeps the inverted W+ codes close to StyleGAN's W space, and a **nonlinear latent transformation network** moves them towards the desired attribute while keeping identity and the other attributes unchanged.
-
-## 📰 News
-
-- **2026-10** — 🔥 Code released (refactored): training of the variance-reduced encoder, the latent classifier and the nonlinear latent transformers; single / sequential editing; evaluation.
-- **2022-05** — VR-FAM is presented at ICASSP 2022. Check out the follow-up **[DO-FAM](https://github.com/Sherlockyyf/DO-FAM)** (ICASSP 2023).
 
 ## 🔍 Method
 
@@ -192,10 +189,6 @@ configs/                       # encoder.yaml · classifier.yaml · transformer.
   doi       = {10.1109/ICASSP43922.2022.9746046}
 }
 ```
-
-## 🙏 Acknowledgements
-
-This code borrows from [stylegan2-pytorch](https://github.com/rosinality/stylegan2-pytorch), [pixel2style2pixel](https://github.com/eladrich/pixel2style2pixel) and [encoder4editing](https://github.com/omertov/encoder4editing). The nonlinear latent transformation network extends the idea of [A Latent Transformer for Disentangled Face Editing](https://github.com/InterDigitalInc/latent-transformer) (re-implemented here). This work was supported by the National Natural Science Foundation of China (No. 62176059).
 
 ## 📄 License
 
