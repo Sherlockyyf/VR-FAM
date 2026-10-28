@@ -11,8 +11,6 @@ Shanghai Key Lab of Intelligent Information Processing, School of Computer Scien
 **ICASSP 2022**
 
 <a href="https://doi.org/10.1109/ICASSP43922.2022.9746046"><img src="https://img.shields.io/badge/Paper-ICASSP%202022-blue" alt="Paper"></a>
-<a href="https://yifanyuan.com/#full-icassp22"><img src="https://img.shields.io/badge/Homepage-yifanyuan.com-green" alt="Homepage"></a>
-<a href="https://yifanyuan.com/lab/#p-icassp22"><img src="https://img.shields.io/badge/Lab-MUSE%20Lab-8a2be2" alt="MUSE Lab"></a>
 <a href="https://github.com/Sherlockyyf/DO-FAM"><img src="https://img.shields.io/badge/Follow--up-DO--FAM%20(ICASSP%202023)-orange" alt="DO-FAM"></a>
 <a href="https://pytorch.org"><img src="https://img.shields.io/badge/PyTorch-%E2%89%A51.8-ee4c2c?logo=pytorch&logoColor=white" alt="PyTorch"></a>
 <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-lightgrey" alt="License"></a>
