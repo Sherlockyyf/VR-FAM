@@ -15,6 +15,8 @@ Shanghai Key Lab of Intelligent Information Processing, School of Computer Scien
 <a href="https://pytorch.org"><img src="https://img.shields.io/badge/PyTorch-%E2%89%A51.8-ee4c2c?logo=pytorch&logoColor=white" alt="PyTorch"></a>
 <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-lightgrey" alt="License"></a>
 
+[English](README.md) · [简体中文](README_zh.md)
+
 </div>
 
 <p align="center"><img src="assets/sequential_editing.jpg" width="85%"><br><em>Sequential facial attribute editing on real images.</em></p>
